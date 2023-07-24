@@ -9,6 +9,8 @@ _Simple implementations of some common patterns in C#._
 
 - **Factory** Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
 
+- **Singleton** is a creational design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code.
+
 ## Structural
 - **Proxy** is a structural design pattern that lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
 
