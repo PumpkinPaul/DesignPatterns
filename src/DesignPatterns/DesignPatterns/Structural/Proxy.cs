@@ -33,17 +33,14 @@ public static class Proxy
         }
     }
 
-    public static class Runner
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            Console.WriteLine($"[{nameof(Proxy)} Pattern]");
-            Console.WriteLine();
+        Console.WriteLine($"[{nameof(Proxy)} Pattern]");
+        Console.WriteLine();
 
-            var robot = new Robot();
-            var robotProxy = new RobotProxy(robot);
-            robotProxy.Move(1, 2);
-        }
+        var robot = new Robot();
+        var robotProxy = new RobotProxy(robot);
+        robotProxy.Move(1, 2);
     }
 }
 

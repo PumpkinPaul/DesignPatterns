@@ -1,13 +1,13 @@
 ﻿namespace DesignPatterns.Creational;
 
-public static class Factory
+public static class FactoryPattern
 {
     public interface IWidget
     {
         void Defangulate();
     }
 
-    public class FizzWidget : IWidget 
+    public class FizzWidget : IWidget
     {
         public void Defangulate() => Console.WriteLine("Fizzzzzzz!!");
     }
@@ -29,16 +29,13 @@ public static class Factory
         }
     }
 
-    public static class Runner
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            Console.WriteLine($"[{nameof(Factory)} Pattern]");
-            Console.WriteLine();
+        Console.WriteLine($"[{nameof(FactoryPattern)} Pattern]");
+        Console.WriteLine();
 
-            var widget = WidgetFactory.Create("buzz");
-            widget.Defangulate();
-        }
+        var widget = WidgetFactory.Create("buzz");
+        widget.Defangulate();
     }
 }
 

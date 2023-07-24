@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Creational;
 
-public static class Builder
+public static class BuilderPattern
 {
     public record Widget(
         int Foo,
@@ -39,18 +39,15 @@ public static class Builder
         }
     }
 
-    public static class Runner
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            Console.WriteLine($"[{nameof(Builder)} Pattern]");
-            Console.WriteLine();
+        Console.WriteLine($"[{nameof(BuilderPattern)} Pattern]");
+        Console.WriteLine();
 
-            var widget = new WidgetBuilder()
-                .WithFoo(123)
-                .WithBaz(999)
-                .Build();
-        }
+        var widget = new WidgetBuilder()
+            .WithFoo(123)
+            .WithBaz(999)
+            .Build();
     }
 }
 

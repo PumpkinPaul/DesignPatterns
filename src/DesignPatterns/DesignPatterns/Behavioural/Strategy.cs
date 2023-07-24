@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Behavioural;
 
-public static class Strategy
+public static class StrategyPattern
 {
     public interface IPaymentStrategy
     {
@@ -33,17 +33,14 @@ public static class Strategy
         }
     }
 
-    public static class Runner
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            Console.WriteLine($"[{nameof(Strategy)} Pattern]");
-            Console.WriteLine();
+        Console.WriteLine($"[{nameof(StrategyPattern)} Pattern]");
+        Console.WriteLine();
 
-            var paymentStrategy = new CreditCardPaymentStrategy();
-            var paymentProcessor = new PaymentProcessor(paymentStrategy);
-            paymentProcessor.ProcessPayment((decimal)29.99D);
-        }
+        var paymentStrategy = new CreditCardPaymentStrategy();
+        var paymentProcessor = new PaymentProcessor(paymentStrategy);
+        paymentProcessor.ProcessPayment((decimal)29.99D);
     }
 }
 

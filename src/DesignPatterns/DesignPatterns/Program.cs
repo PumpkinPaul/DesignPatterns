@@ -12,29 +12,33 @@ Separator();
 Console.WriteLine("*** Creational Patterns ***");
 Separator();
 
-Builder.Runner.Execute();
+BuilderPattern.Execute();
 NewLine();
 Separator();
 
-Factory.Runner.Execute();
+FactoryPattern.Execute();
+NewLine();
+Separator();
+
+SingletonPattern.Execute();
 NewLine();
 Separator();
 
 Console.WriteLine("*** Structural Patterns ***");
 Separator();
 
-Proxy.Runner.Execute();
+Proxy.Execute();
 NewLine();
 Separator();
 
-Adapter.Runner.Execute();
+Adapter.Execute();
 NewLine();
 Separator();
 
 Console.WriteLine("*** Behavioural Patterns ***");
 Separator();
 
-Strategy.Runner.Execute();
+StrategyPattern.Execute();
 NewLine();
 Separator();
 

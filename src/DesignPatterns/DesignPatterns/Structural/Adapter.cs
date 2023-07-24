@@ -38,18 +38,15 @@ public static class Adapter
         }
     }
 
-    public static class Runner
+    public static void Execute()
     {
-        public static void Execute()
-        {
-            Console.WriteLine($"[{nameof(Adapter)} Pattern]");
-            Console.WriteLine();
+        Console.WriteLine($"[{nameof(Adapter)} Pattern]");
+        Console.WriteLine();
 
-            var ukPlug = new UkPlug();
-            IEuroPlug adapter = new EuroPlugToUkPlugAdapter(ukPlug);
+        var ukPlug = new UkPlug();
+        IEuroPlug adapter = new EuroPlugToUkPlugAdapter(ukPlug);
 
-            adapter.Insert();
-        }
+        adapter.Insert();
     }
 }
 
